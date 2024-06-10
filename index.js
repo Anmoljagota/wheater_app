@@ -91,7 +91,7 @@ const ShowData = (weatherdetails) => {
   });
 };
 
-//API TO GET DATA 
+//API TO GET DATA
 const GetWeatherDetails = async (lat, lon, val) => {
   try {
     const url =
@@ -141,7 +141,12 @@ const DayOfweek = (dateString) => {
 };
 const DaysWeather = (weatherdata) => {
   const main = document.querySelector("#main-day-forecast");
+  
+  
   main.innerHTML = "";
+  const h5 = document.createElement("h5");
+  h5.innerText = "7-DAY FORECAST";
+  main.append(h5);
   weatherdata.daily.data.forEach((ele) => {
     const currentday = DayOfweek(ele.day);
     const div = document.createElement("div");
@@ -182,7 +187,6 @@ const getcity = () => {
   }, 2000);
 };
 
-
 //Mainn DAY wheater details
 function mainweather(data, val) {
   const icon = document.getElementById("weather-icon");
@@ -213,7 +217,6 @@ function mainweather(data, val) {
 
   icon.append(addelement);
 }
-
 
 window.addEventListener("DOMContentLoaded", () => {
   GetLocation();

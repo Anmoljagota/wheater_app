@@ -69,6 +69,7 @@
   gap: 1rem;
   border-right: 1px solid rgb(71, 66, 66);
   padding: 1.5rem;
+  border-radius: 1rem;
 }
 .fa-solid {
   color: white;
@@ -95,6 +96,10 @@
   animation: rotate 10s infinite linear;
 }
 
+#main-day-forecast {
+  padding: 2rem;
+  border-radius: 1rem;
+}
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -121,7 +126,6 @@
   display: flex;
   justify-content: space-around;
   gap: 0.5rem;
-  
 }
 
 #city-weather {
@@ -150,21 +154,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.hamburger {
-  display: none;
-  position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-.degree-symbol {
-  font-size: 0.8em;
-  vertical-align: super;
 }
 
 .weather-icon {
